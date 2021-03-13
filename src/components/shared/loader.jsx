@@ -6,7 +6,7 @@ const LoaderContainer = styled.div`
   .sk-cube-grid {
     width: 100px;
     height: 100px;
-    margin: 100px auto 10px auto;
+    margin: 10px auto;
   }
 
   .sk-cube-grid .sk-cube {

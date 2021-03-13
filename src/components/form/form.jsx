@@ -58,6 +58,8 @@ function Form() {
     addContact(data);
   };
 
+  const requiredMessage = 'Este campo es requerido'
+
   return (
     <div className="relative">
       {loading && (
@@ -88,7 +90,7 @@ function Form() {
               ref={register({ required: true })}
             />
             {errors.nombre && (
-              <span className="error">Este campo es requerido</span>
+              <span className="error">{requiredMessage}</span>
             )}
             <input
               type="text"
@@ -101,7 +103,7 @@ function Form() {
               })}
             />
             {errors.email?.type === "required" && (
-              <span className="error">Este campo es requerido</span>
+              <span className="error">{requiredMessage}</span>
             )}
             {errors.email?.type === "pattern" && (
               <span className="error">Correo inválido</span>
@@ -114,7 +116,7 @@ function Form() {
               ref={register({ required: true, pattern: /^[3][1-9]\d{8}$/ })}
             />
             {errors.telefono?.type === "required" && (
-              <span className="error">Este campo es requerido</span>
+              <span className="error">{requiredMessage}</span>
             )}
             {errors.telefono?.type === "pattern" && (
               <span className="error">Teléfono inválido</span>
@@ -127,7 +129,7 @@ function Form() {
               ref={register({ required: true })}
             />
             {errors.ciudad && (
-              <span className="error">Este campo es requerido</span>
+              <span className="error">{requiredMessage}</span>
             )}
             <textarea
               className="input-text"
@@ -136,7 +138,7 @@ function Form() {
               ref={register({ required: true })}
             ></textarea>
             {errors.comentario && (
-              <span className="error">Este campo es requerido</span>
+              <span className="error">{requiredMessage}</span>
             )}
             <div className="agreement">
               Al hacer click en enviar, estás aceptando los{" "}

@@ -4,6 +4,10 @@ import FooterTip from "../shared/footerTip";
 
 const FooterWrapper = styled.div`
   background-color: #e99935;
+  background-image: url("/static/img/transp.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;

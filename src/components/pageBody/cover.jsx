@@ -28,6 +28,10 @@ const CoverWrapper = styled.div`
     .left {
       border-radius: 55px 0 0 0;
       background-color: #e89836;
+      background-image: url("/static/img/transp.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
       .top-text,
       .first-central,
       .second-central {
@@ -97,13 +101,13 @@ const CoverWrapper = styled.div`
   }
   @media (max-width: 768px) {
     .content {
-        margin-top: 100px;
-        flex-direction: column;
+      margin-top: 100px;
+      flex-direction: column;
     }
   }
   @media (max-width: 450px) {
     .content {
-        transform: scale(0.8,0.8);
+      transform: scale(0.8, 0.8);
     }
   }
 `;
