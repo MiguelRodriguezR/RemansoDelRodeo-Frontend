@@ -53,7 +53,7 @@ const DescTopWrapper = styled.div`
 function DescTop() {
 
   const loaded = useProgressiveImage("/static/img/perritos.png");
-  const placeholder = "perritos-placeholder.jpg";
+  const placeholder = "/static/img/perritos-placeholder.jpg";
 
   return (
     <DescTopWrapper>
