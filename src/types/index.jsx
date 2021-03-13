@@ -1,0 +1,3 @@
+export const ADD_CONTACT = 'ADD_CONTACT';
+export const CONTACT_ERROR = 'CONTACT_ERROR';
+export const CONTACT_ADDED = 'CONTACT_ADDED';

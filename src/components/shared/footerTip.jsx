@@ -22,7 +22,7 @@ const TipWrapper = styled.div`
 function FooterTip({ topText, bottomText, icon }) {
   return (
     <TipWrapper>
-      <span class="material-icons">{icon}</span>
+      <span className="material-icons">{icon}</span>
       <div className="top-text">{topText}</div>
       <div className="bottom-text">{bottomText}</div>
     </TipWrapper>
