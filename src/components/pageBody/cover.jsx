@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Form from "../form/form";
+import { useProgressiveImage } from "../shared/lazyImage";
 
 const CoverWrapper = styled.div`
   width: 100%;
   height: 100vh;
   min-height: 800px;
-  background-image: url("/static/img/cover.jpg");
+  /* background-image: url("") ; */
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -113,8 +114,12 @@ const CoverWrapper = styled.div`
 `;
 
 function Cover() {
+
+  const loaded = useProgressiveImage("/static/img/cover.jpg");
+  const placeholder = "/static/img/cover-placeholder.jpg";
+  
   return (
-    <CoverWrapper>
+    <CoverWrapper style={{ backgroundImage: `url(${loaded || placeholder})` }}>
       <div className="content">
         <div className="left">
           <div className="top-text">

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { useProgressiveImage } from "../shared/lazyImage";
 
 const DescTopWrapper = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const DescTopWrapper = styled.div`
   }
   .left {
     height: 70vh;
-    background-image: url("/static/img/perritos.png");
+    /* background-image: url("/static/img/perritos.png"); */
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
@@ -50,9 +51,13 @@ const DescTopWrapper = styled.div`
 `;
 
 function DescTop() {
+
+  const loaded = useProgressiveImage("/static/img/perritos.png");
+  const placeholder = "perritos-placeholder.jpg";
+
   return (
     <DescTopWrapper>
-      <div className="left"></div>
+      <div className="left" style={{ backgroundImage: `url(${loaded || placeholder})` }}></div>
       <div className="right">
         <div className="right-wrapper">
           <div className="top-title">PROYECTO</div>
